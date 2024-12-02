@@ -1,0 +1,29 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class ReincarnationBlocker {
+    // A sacred barrier (HashSet) to prevent reincarnation and spiritual energy transfers
+    private static final Set<String> spiritualBarrier = new HashSet<>();
+
+    // Method to attempt a spiritual energy transfer and block reincarnation
+    public static boolean blockReincarnation(String spiritualEnergy) {
+        return spiritualBarrier.add(spiritualEnergy); // Returns true if the transfer is new
+    }
+
+    public static void main(String[] args) {
+        // Example usage
+        String energy = "AncientSoul";
+
+        // Attempt to add a new spiritual energy
+        if (!blockReincarnation(energy)) {
+            System.out.println("Reincarnation blocked! Spiritual energy transfer denied.");
+        } else {
+            System.out.println("Spiritual energy accepted. No reincarnation detected.");
+        }
+
+        // Attempt to add the same energy again
+        if (!blockReincarnation(energy)) {
+            System.out.println("Reincarnation blocked! Spiritual energy transfer denied.");
+        }
+    }
+}
